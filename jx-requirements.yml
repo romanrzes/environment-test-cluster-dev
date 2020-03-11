@@ -1,4 +1,3 @@
-bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-helmfile-config
 cluster:
   gitKind: github
   gitName: github
