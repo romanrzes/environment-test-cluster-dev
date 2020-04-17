@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: romanrzes
+  repo: quickstart-test-jx
+  url: https://github.com/romanrzes/quickstart-test-jx.git
+  version: ""
+  versionURL: ""
