@@ -1,0 +1,109 @@
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-5tw28[0m
+{"level":"warn","ts":1587982674.9095337,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587982674.9099748,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-fbjb4[0m
+{"level":"warn","ts":1587982675.3061554,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587982675.3074214,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-romanrzes-environment-test-clus-bppn7-j4rrk[0m
+{"level":"warn","ts":1587982681.4102752,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587982682.9936302,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-test-cluster-dev.git @ master in path /workspace/source"}
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6cf563d85374478c3cad06bc50dc6e35e008705e,4:b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830: 6cf563d85374478c3cad06bc50dc6e35e008705e:
+DEBUG: ran git fetch --unshallow origin b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830: 6cf563d85374478c3cad06bc50dc6e35e008705e: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 6cf563d85374478c3cad06bc50dc6e35e008705e
+DEBUG: ran git reset --hard 6cf563d85374478c3cad06bc50dc6e35e008705e in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830
+DEBUG: ran git merge b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 6cf563d85374478c3cad06bc50dc6e35e008705e..HEAD
+Merged SHA b1aa1f0bf7dd959f28f3b05b1bc0a84ecb819830 with commit message 'chore(deps): bump https://github.com/*********/go-project-for-test-command.git' into base branch master
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-verify-secrets[0m
+created directory /secrets/**-boot
+loaded Secrets from: local in namespace ** with Secret **-boot-secrets
+exported Secrets to file: /secrets/**-boot/secrets.yaml
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-create-helmfile[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/**r-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-system[0m
+Adding repo stable https://kubernetes-charts.storage.googleapis.com
+"stable" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "stable" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Fetching stable/nginx-ingress
+Linting release=nginx-ingress, chart=/tmp/504851965/nginx-ingress/1.34.2/stable/nginx-ingress/nginx-ingress
+==> Linting /tmp/504851965/nginx-ingress/1.34.2/stable/nginx-ingress/nginx-ingress
+
+1 chart(s) linted, 0 chart(s) failed
+
+
+Showing logs for build [32mromanrzes-environment-test-clus-bppn7-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-apps[0m
+Adding repo jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Building dependency release=repositories, chart=../repositories
+Fetching jenkins-x/**boot-helmfile-resources
+Fetching jenkins-x/nexus
+Fetching jenkins-x/lighthouse
+Fetching jenkins-x/tekton
+Fetching jenkins-x/chartmuseum
+Fetching jenkins-x/**ui
+Linting release=**boot-helmfile-resources, chart=/tmp/594150998/**boot-helmfile-resources/0.0.155/jenkins-x/**boot-helmfile-resources/**boot-helmfile-resources
+==> Linting /tmp/594150998/**boot-helmfile-resources/0.0.155/jenkins-x/**boot-helmfile-resources/**boot-helmfile-resources
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=nexus, chart=/tmp/594150998/nexus/0.1.21/jenkins-x/nexus/nexus
+==> Linting /tmp/594150998/nexus/0.1.21/jenkins-x/nexus/nexus
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=lighthouse, chart=/tmp/594150998/lighthouse/0.0.493/jenkins-x/lighthouse/lighthouse
+==> Linting /tmp/594150998/lighthouse/0.0.493/jenkins-x/lighthouse/lighthouse
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=tekton, chart=/tmp/594150998/tekton/0.0.51/jenkins-x/tekton/tekton
+==> Linting /tmp/594150998/tekton/0.0.51/jenkins-x/tekton/tekton
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=chartmuseum, chart=/tmp/594150998/chartmuseum/1.1.7/jenkins-x/chartmuseum/chartmuseum
+==> Linting /tmp/594150998/chartmuseum/1.1.7/jenkins-x/chartmuseum/chartmuseum
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=**ui, chart=/tmp/594150998/**ui/latest/jenkins-x/**ui/**ui
+==> Linting /tmp/594150998/**ui/latest/jenkins-x/**ui/**ui
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=repositories, chart=../repositories
+==> Linting ../repositories
+[INFO] Chart.yaml: icon is recommended
+[INFO] values.yaml: file does not exist
+
+1 chart(s) linted, 0 chart(s) failed
+
