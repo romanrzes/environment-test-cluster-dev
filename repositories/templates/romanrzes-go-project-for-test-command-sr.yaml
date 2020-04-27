@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: romanrzes
+    provider: github
+    repository: go-project-for-test-command
+  name: romanrzes-go-project-for-test-command
+spec:
+  description: Imported application for romanrzes/go-project-for-test-command
+  httpCloneURL: https://github.com/romanrzes/go-project-for-test-command.git
+  org: romanrzes
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: go-project-for-test-command
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/romanrzes/go-project-for-test-command.git
