@@ -11,3 +11,9 @@ dependencies:
   url: https://github.com/romanrzes/go-project-for-test-command.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: kdevu
+  repo: test
+  url: https://github.com/kdevu/test.git
+  version: ""
+  versionURL: ""
