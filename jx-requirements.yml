@@ -80,3 +80,9 @@ versionStream:
   ref: master
   url: https://github.com/jenkins-x/jxr-versions.git
 webhook: lighthouse
+storage:
+  backup:
+    enabled: true
+    url: gs://velero-bucket-backup
+velero:
+  namespace: velero
